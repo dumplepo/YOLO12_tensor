@@ -1,40 +1,12 @@
-<div align="center">
-  <img width="75%" src="assets/logo.png">
-
-  <p align="center">
-      <a href="./LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/laugh12321/TensorRT-YOLO?style=for-the-badge&color=0074d9"></a>
-      <a href="https://github.com/laugh12321/TensorRT-YOLO/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/laugh12321/TensorRT-YOLO?style=for-the-badge&color=0074d9"></a>
-      <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/laugh12321/TensorRT-YOLO?style=for-the-badge&color=3dd3ff">
-      <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-      <img alt="Arch" src="https://img.shields.io/badge/Arch-x86%20%7C%20ARM-0091BD?style=for-the-badge&logo=cpu&logoColor=white">
-      <img alt="NVIDIA" src="https://img.shields.io/badge/NVIDIA-%2376B900.svg?style=for-the-badge&logo=nvidia&logoColor=white">
-  </p>
-</div>
-
 ---
 
 🚀 TensorRT-YOLO is an **easy-to-use**, **extremely efficient** inference deployment tool for the **YOLO series** designed specifically for NVIDIA devices. The project not only integrates TensorRT plugins to enhance post-processing but also utilizes CUDA kernels and CUDA graphs to accelerate inference. TensorRT-YOLO provides support for both C++ and Python inference, aiming to deliver a 📦**out-of-the-box** deployment experience. It covers various task scenarios such as [object detection](examples/detect/), [instance segmentation](examples/segment/), [image classification](examples/classify/), [pose estimation](examples/pose/), [oriented object detection](examples/obb/), and [video analysis](examples/VideoPipe), meeting developers' deployment needs in **multiple scenarios**.
 
 <div align="center">
 
-<img src='assets/task-banner.png' width="800px">
 <img src='assets/example.gif' width="800px">
 
 </div>
-
-## <div align="center">🌠 Recent updates</div>
-
-- 2026-01-07: Added support for [YOLO-Master](https://github.com/isLinXu/YOLO-Master), including classification, detection and instance segmentation. 🌟 NEW
-
-- 2025-10-05: Precision perfectly aligned, CUDA flawlessly replicates LetterBox with a pixel error of 0 in the vast majority of cases. The Python module has undergone significant restructuring, greatly enhancing usability. 🌟 NEW
-
-- 2025-06-09: In C++, only a single header file `trtyolo.hpp` is included, with zero third-party dependencies (no need to link CUDA and TensorRT when using the module). Support for data structures with image spacing (Pitch) has been added. For more details, see [Bilibili](https://www.bilibili.com/video/BV1e2N1zjE3L). 🌟 NEW
-
-- 2025-04-19: Added support for [YOLO-World](https://docs.ultralytics.com/zh/models/yolo-world/) and [YOLOE](https://docs.ultralytics.com/zh/models/yoloe/), including classification, oriented bounding boxes, pose estimation, and instance segmentation. See [Bilibili](https://www.bilibili.com/video/BV12N5bzkENV) for details. 🌟 NEW
-
-- 2025-03-29: Added support for [YOLO12](https://github.com/sunsmarterjie/yolov12), including classification, oriented bounding boxes, pose estimation, and instance segmentation. See [issues](https://github.com/sunsmarterjie/yolov12/issues/22) for details. 🌟 NEW
-
-- [Performance Leap! TensorRT-YOLO 6.0: Comprehensive Upgrade Analysis and Practical Guide](https://medium.com/@laugh12321/performance-leap-tensorrt-yolo-6-0-comprehensive-upgrade-analysis-and-practical-guide-9d19ad3b53f9) 🌟 NEW
 
 ## <div align="center">✨ Key Features</div>
 

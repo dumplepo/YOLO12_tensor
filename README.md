@@ -1,4 +1,4 @@
-[English](README.en.md) | 简体中文
+English | [简体中文](README.md)
 
 <div align="center">
   <img width="75%" src="assets/logo.png">
@@ -15,7 +15,7 @@
 
 ---
 
-🚀 TensorRT-YOLO 是一款专为 NVIDIA 设备设计的**易用灵活**、**极致高效**的**YOLO系列**推理部署工具。项目不仅集成了 TensorRT 插件以增强后处理效果，还使用了 CUDA 核函数以及 CUDA 图来加速推理。TensorRT-YOLO 提供了 C++ 和 Python 推理的支持，旨在提供📦**开箱即用**的部署体验。包括 [目标检测](examples/detect/)、[实例分割](examples/segment/)、[图像分类](examples/classify/)、[姿态识别](examples/pose/)、[旋转目标检测](examples/obb/)、[视频分析](examples/VideoPipe)等任务场景，满足开发者**多场景**的部署需求。
+🚀 TensorRT-YOLO is an **easy-to-use**, **extremely efficient** inference deployment tool for the **YOLO series** designed specifically for NVIDIA devices. The project not only integrates TensorRT plugins to enhance post-processing but also utilizes CUDA kernels and CUDA graphs to accelerate inference. TensorRT-YOLO provides support for both C++ and Python inference, aiming to deliver a 📦**out-of-the-box** deployment experience. It covers various task scenarios such as [object detection](examples/detect/), [instance segmentation](examples/segment/), [image classification](examples/classify/), [pose estimation](examples/pose/), [oriented object detection](examples/obb/), and [video analysis](examples/VideoPipe), meeting developers' deployment needs in **multiple scenarios**.
 
 <div align="center">
 
@@ -24,98 +24,89 @@
 
 </div>
 
-## <div align="center">🌠 近期更新</div>
+## <div align="center">🌠 Recent updates</div>
 
-- 🔥 **实战课程｜TensorRT × Triton Inference Server 模型部署**
-  - **平台**: [BiliBili 课堂](https://www.bilibili.com/cheese/play/ss193350134) | [微信公众号](https://mp.weixin.qq.com/s/DVEo6RB-Wt4yDIX_3u-7Gw) 🚀 **HOT**
-  - **团队**: [laugh12321](https://space.bilibili.com/86034462) | [不归牛顿管的熊猫](https://space.bilibili.com/393625476)
-  - 🛠 **硬核专题**:  
-    ▸ **自定义插件开发**（含Plugin注册全流程）  
-    ▸ **CUDA Graph 原理与工程实践**  
-    ▸ **Triton Inference Server 部署技巧**  
+- 2026-01-07: Added support for [YOLO-Master](https://github.com/isLinXu/YOLO-Master), including classification, detection and instance segmentation. 🌟 NEW
 
-- 2026-01-07: 添加对 [YOLO-Master](https://github.com/isLinXu/YOLO-Master) 的支持，包括分类、检测以及实例分割。🌟 NEW
+- 2025-10-05: Precision perfectly aligned, CUDA flawlessly replicates LetterBox with a pixel error of 0 in the vast majority of cases. The Python module has undergone significant restructuring, greatly enhancing usability. 🌟 NEW
 
-- 2025-10-05：精度完美对齐，CUDA 完美复刻 LetterBox，绝大多数情况下像素误差为 0。Python 模块重大重构，易用性大幅提升。🌟 NEW
+- 2025-06-09: In C++, only a single header file `trtyolo.hpp` is included, with zero third-party dependencies (no need to link CUDA and TensorRT when using the module). Support for data structures with image spacing (Pitch) has been added. For more details, see [Bilibili](https://www.bilibili.com/video/BV1e2N1zjE3L). 🌟 NEW
 
-- 2025-06-09: C++仅引单头文件 `trtyolo.hpp`，零第三方依赖（使用模块时无需链接 CUDA 和 TensorRT），增加对带图像间距（Pitch）数据结构的支持，详见 [B站](https://www.bilibili.com/video/BV1e2N1zjE3L)。🌟 NEW
+- 2025-04-19: Added support for [YOLO-World](https://docs.ultralytics.com/zh/models/yolo-world/) and [YOLOE](https://docs.ultralytics.com/zh/models/yoloe/), including classification, oriented bounding boxes, pose estimation, and instance segmentation. See [Bilibili](https://www.bilibili.com/video/BV12N5bzkENV) for details. 🌟 NEW
 
-- 2025-04-19: 添加对 [YOLO-World](https://docs.ultralytics.com/zh/models/yolo-world/),  [YOLOE](https://docs.ultralytics.com/zh/models/yoloe/) 的支持，包括分类、定向边界框、姿态估计以及实例分割，详见 [B站](https://www.bilibili.com/video/BV12N5bzkENV)。🌟 NEW
+- 2025-03-29: Added support for [YOLO12](https://github.com/sunsmarterjie/yolov12), including classification, oriented bounding boxes, pose estimation, and instance segmentation. See [issues](https://github.com/sunsmarterjie/yolov12/issues/22) for details. 🌟 NEW
 
-- 2025-03-29: 添加对 [YOLO12](https://github.com/sunsmarterjie/yolov12) 的支持，包括分类、定向边界框、姿态估计以及实例分割，详见 [issues](https://github.com/sunsmarterjie/yolov12/issues/22)。🌟 NEW
+- [Performance Leap! TensorRT-YOLO 6.0: Comprehensive Upgrade Analysis and Practical Guide](https://medium.com/@laugh12321/performance-leap-tensorrt-yolo-6-0-comprehensive-upgrade-analysis-and-practical-guide-9d19ad3b53f9) 🌟 NEW
 
-- [性能飞跃！TensorRT-YOLO 6.0 全面升级解析与实战指南](https://www.cnblogs.com/laugh12321/p/18693017) 🌟 NEW
+## <div align="center">✨ Key Features</div>
 
+### 🎯 Diverse YOLO Support
+- **Comprehensive Compatibility**: Supports YOLOv3 to YOLO12 series models, as well as PP-YOLOE+, YOLO-World and YOLO-Master, meeting diverse needs. See [🖥️ Supported Models List](https://github.com/laugh12321/TensorRT-YOLO/blob/export/README.md#%EF%B8%8F-model-support-list) for details.
+- **Flexible Switching**: Provides simple and easy-to-use interfaces for quick switching between different YOLO versions. 🌟 NEW
+- **Multi-Scenario Applications**: Offers rich example codes covering [Detect](examples/detect/), [Segment](examples/segment/), [Classify](examples/classify/), [Pose](examples/pose/), [OBB](examples/obb/), and more.
 
-## <div align="center">✨ 主要特性</div>
+### 🚀 Performance Optimization
+- **CUDA Acceleration**: Optimizes pre-processing through CUDA kernels and accelerates inference using CUDA graphs.
+- **TensorRT Integration**: Deeply integrates TensorRT plugins to significantly speed up post-processing and improve overall inference efficiency.
+- **Multi-Context Inference**: Supports multi-context parallel inference to maximize hardware resource utilization. 🌟 NEW
+- **Memory Management Optimization**: Adapts multi-architecture memory optimization strategies (e.g., Zero Copy mode for Jetson) to enhance memory efficiency. 🌟 NEW
 
-### 🎯 多样化的 YOLO 支持
-- **全面兼容**：支持 YOLOv3 至 YOLO12 全系列模型，以及 PP-YOLOE+、YOLO-World 和 YOLO-Master 等多种变体，满足多样化需求，详见 [🖥️ 模型支持列表](https://github.com/laugh12321/TensorRT-YOLO/blob/export/README.cn.md#%EF%B8%8F-模型支持列表)。
-- **灵活切换**：提供简洁易用的接口，支持不同版本 YOLO 模型的快速切换。🌟 NEW
-- **多场景应用**：提供丰富的示例代码，涵盖[Detect](examples/detect/)、[Segment](examples/segment/)、[Classify](examples/classify/)、[Pose](examples/pose/)、[OBB](examples/obb/)等多种应用场景。
+### 🛠️ Usability
+- **Out-of-the-Box**: Provides comprehensive C++ and Python inference support to meet different developers' needs.
+- **CLI Tools**: Built-in command-line tools for quick model export and inference, improving development efficiency.
+- **Docker Support**: Offers one-click Docker deployment solutions to simplify environment configuration and deployment processes.
+- **No Third-Party Dependencies**: All functionalities are implemented using standard libraries, eliminating the need for additional dependencies and simplifying deployment.
+- **Easy Deployment**: Provides dynamic library compilation support for easy calling and deployment.
 
-### 🚀 性能优化
-- **CUDA 加速**：通过 CUDA 核函数优化前处理流程，并采用 CUDA 图技术加速推理过程。
-- **TensorRT 集成**：深度集成 TensorRT 插件，显著加速后处理，提升整体推理效率。
-- **多 Context 推理**：支持多 Context 并行推理，最大化硬件资源利用率。🌟 NEW
-- **显存管理优化**：适配多架构显存优化策略（如 Jetson 的 Zero Copy 模式），提升显存效率。🌟 NEW
+### 🌐 Compatibility
+- **Multi-Platform Support**: Fully compatible with various operating systems and hardware platforms, including Windows, Linux, ARM, and x86.
+- **TensorRT Compatibility**: Perfectly adapts to TensorRT 10.x versions, ensuring seamless integration with the latest technology ecosystem.
 
-### 🛠️ 易用性
-- **开箱即用**：提供全面的 C++ 和 Python 推理支持，满足不同开发者需求。
-- **CLI 工具**：内置命令行工具，支持快速模型导出与推理，提升开发效率。
-- **Docker 支持**：提供 Docker 一键部署方案，简化环境配置与部署流程。
-- **无第三方依赖**：全部功能使用标准库实现，无需额外依赖，简化部署流程。
-- **部署便捷**：提供动态库编译支持，方便调用和部署。
+### 🔧 Flexible Configuration
+- **Customizable Preprocessing Parameters**: Supports flexible configuration of various preprocessing parameters, including **channel swapping (SwapRB)**, **normalization parameters**, and **border padding**. 🌟 NEW
 
-### 🌐 兼容性
-- **多平台支持**：全面兼容 Windows、Linux、ARM、x86 等多种操作系统与硬件平台。
-- **TensorRT 兼容**：完美适配 TensorRT 10.x 版本，确保与最新技术生态无缝衔接。
+## <div align="center">💨 Quick Start</div>
 
-### 🔧 灵活配置
-- **预处理参数自定义**：支持多种预处理参数灵活配置，包括 **通道交换 (SwapRB)**、**归一化参数**、**边界值填充**。🌟 NEW
+### 1. Prerequisites
 
-## <div align="center">💨 快速开始</div>
-
-### 1. 前置依赖
-
-- **CUDA**：推荐版本 ≥ 11.0.1
-- **TensorRT**：推荐版本 ≥ 8.6.1
-- **操作系统**：Linux (x86_64 或 arm)（推荐）；Windows 亦可支持
+- **CUDA**: Recommended version ≥ 11.0.1
+- **TensorRT**: Recommended version ≥ 8.6.1
+- **Operating System**: Linux (x86_64 or arm) (recommended); Windows is also supported
 
 > [!NOTE]  
-> 如果您在 Windows 下进行开发，可以参考以下配置指南：
+> If you are developing on Windows, you can refer to the following setup guides:
 >
-> - [Windows 开发环境配置——NVIDIA 篇](https://www.cnblogs.com/laugh12321/p/17830096.html)
-> - [Windows 开发环境配置——C++ 篇](https://www.cnblogs.com/laugh12321/p/17827624.html)
+> - [Windows Development Environment Setup – NVIDIA](https://www.cnblogs.com/laugh12321/p/17830096.html)
+> - [Windows Development Environment Setup – C++](https://www.cnblogs.com/laugh12321/p/17827624.html)
 
-### 2. 编译安装
+### 2. Compilation and Installation
 
-首先，克隆 TensorRT-YOLO 仓库：
+First, clone the TensorRT-YOLO repository:
 
 ```bash
 git clone https://github.com/laugh12321/TensorRT-YOLO
 cd TensorRT-YOLO
 ```
 
-然后使用 CMake，可以按照以下步骤操作：
+Then compile using CMake with the following steps:
 
 ```bash
-pip install "pybind11[global]" # 安装 pybind11，用于生成 Python 绑定
+pip install "pybind11[global]" # Install pybind11 to generate Python bindings
 cmake -S . -B build -D TRT_PATH=/your/tensorrt/dir -D BUILD_PYTHON=ON -D CMAKE_INSTALL_PREFIX=/your/tensorrt-yolo/install/dir
 cmake --build build -j$(nproc) --config Release --target install
 ```
 
-执行上述指令后，`tensorrt-yolo` 库将被安装到指定的 `CMAKE_INSTALL_PREFIX` 路径中。其中，`include` 文件夹中包含头文件，`lib` 文件夹中包含 `trtyolo` 动态库和 `custom_plugins` 动态库（仅在使用 `trtexec` 构建 OBB、Segment 或 Pose 模型时需要）。如果在编译时启用了 `BUILD_PYTHON` 选项，则还会在 `trtyolo/libs` 路径下生成相应的 Python 绑定文件。
+After executing the above commands, the `tensorrt-yolo` library will be installed in the specified `CMAKE_INSTALL_PREFIX` directory. The `include` folder will contain the header files, and the `lib` folder will contain the `trtyolo` dynamic library and the `custom_plugins` dynamic library (only needed when building OBB, Segment, or Pose models with `trtexec`). If the `BUILD_PYTHON` option is enabled during compilation, the corresponding Python binding files will also be generated in the `tensorrt_yolo/libs` path.
 
 > [!NOTE]  
-> 在使用 C++ 动态库之前，请确保将指定的 `CMAKE_INSTALL_PREFIX` 路径添加到环境变量中，以便 CMake 的 `find_package` 能够找到 `tensorrt-yolo-config.cmake` 文件。可以通过以下命令完成此操作：
+> Before using the C++ dynamic library, ensure that the specified `CMAKE_INSTALL_PREFIX` path is added to the environment variables so that CMake's `find_package` can locate the `tensorrt-yolo-config.cmake` file. This can be done using the following command:
 >
 > ```bash
 > export PATH=$PATH:/your/tensorrt-yolo/install/dir # linux
 > $env:PATH = "$env:PATH;C:\your\tensorrt-yolo\install\dir;C:\your\tensorrt-yolo\install\dir\bin" # windows
 > ```
 
-如果您希望在 Python 上体验与 C++ 相同的推理速度，则编译时需开启 `BUILD_PYTHON` 选项，然后再按照以下步骤操作：
+If you want to experience the same inference speed in Python as in C++, you need to enable the `BUILD_PYTHON` option during compilation, and then follow the steps below:
 
 ```bash
 pip install --upgrade build
@@ -123,13 +114,13 @@ python -m build --wheel
 pip install dist/trtyolo-6.*-py3-none-any.whl
 ```
 
-### 3. 模型导出
+### 3. Model Export
 
-- 使用项目配套的 [`trtyolo-export`](https://github.com/laugh12321/TensorRT-YOLO/tree/export) 工具包，导出适用于该项目推理的 ONNX 模型并构建为 TensorRT 引擎。
+- Use the [`trtyolo-export`](https://github.com/laugh12321/TensorRT-YOLO/tree/export) tool package that comes with the project to export the ONNX model suitable for inference in this project and build it into a TensorRT engine.
 
-### 4. 推理示例
+### 4. Inference Example
 
-- 使用 Python 进行推理：
+- Inference using Python:
 
   ```python
   import cv2
@@ -137,36 +128,36 @@ pip install dist/trtyolo-6.*-py3-none-any.whl
 
   from trtyolo import TRTYOLO
 
-  # -------------------- 初始化模型 --------------------
-  # 注意：task参数需与导出时指定的任务类型一致（"detect"、"segment"、"classify"、"pose"、"obb"）
-  # profile参数开启后，会在推理时计算性能指标，调用 model.profile() 可获取
-  # swap_rb参数开启后，会在推理前交换通道顺序（确保模型输入时RGB）
+  # -------------------- Initialize the model --------------------
+  # Note: The task parameter must match the task type specified during export ("detect", "segment", "classify", "pose", "obb")
+  # The profile parameter, when enabled, calculates performance metrics during inference, which can be retrieved by calling model.profile()
+  # The swap_rb parameter, when enabled, swaps the channel order before inference (ensuring the model input is RGB)
   model = TRTYOLO("yolo11n-with-plugin.engine", task="detect", profile=True, swap_rb=True)
 
-  # -------------------- 加载测试图片并推理 --------------------
+  # -------------------- Load the test image and perform inference --------------------
   image = cv2.imread("test_image.jpg")
   result = model.predict(image)
   print(f"==> result: {result}")
 
-  # -------------------- 可视化结果 --------------------
+  # -------------------- Visualize the results --------------------
   box_annotator = sv.BoxAnnotator()
   annotated_frame = box_annotator.annotate(scene=image.copy(), detections=result)
 
-  # -------------------- 性能评估 --------------------
+  # -------------------- Performance evaluation --------------------
   throughput, cpu_latency, gpu_latency = model.profile()
   print(throughput)
   print(cpu_latency)
   print(gpu_latency)
 
-  # -------------------- 克隆模型 --------------------
-  # 克隆模型实例（适用于多线程场景）
-  cloned_model = model.clone()  # 创建独立副本，避免资源竞争
-  # 验证克隆模型推理一致性
+  # -------------------- Clone the model --------------------
+  # Clone the model instance (suitable for multi-threading scenarios)
+  cloned_model = model.clone()  # Create an independent copy to avoid resource contention
+  # Verify the consistency of inference with the cloned model
   cloned_result = cloned_model.predict(input_img)
   print(f"==> cloned_result: {cloned_result}")
   ```
 
-- 使用 C++ 进行推理：
+- Inference using C++:
 
   ```cpp
   #include <memory>
@@ -176,62 +167,62 @@ pip install dist/trtyolo-6.*-py3-none-any.whl
 
   int main() {
       try {
-          // -------------------- 初始化配置 --------------------
+          // -------------------- Initialization --------------------
           trtyolo::InferOption option;
-          option.enableSwapRB();  // BGR->RGB转换
+          option.enableSwapRB();  // BGR->RGB conversion
 
-          // 特殊模型参数设置示例
+          // Special model parameter setup example
           // const std::vector<float> mean{0.485f, 0.456f, 0.406f};
           // const std::vector<float> std{0.229f, 0.224f, 0.225f};
           // option.setNormalizeParams(mean, std);
 
-          // -------------------- 模型初始化 --------------------
-          // ClassifyModel、DetectModel、OBBModel、SegmentModel 和 PoseModel 分别对应于图像分类、检测、方向边界框、分割和姿态估计模型
+          // -------------------- Model Initialization --------------------
+          // The models ClassifyModel, DetectModel, OBBModel, SegmentModel, and PoseModel correspond to image classification, detection, oriented bounding box, segmentation, and pose estimation models, respectively.
           auto detector = std::make_unique<trtyolo::DetectModel>(
-              "yolo11n-with-plugin.engine",  // 模型路径
-              option                         // 推理设置
+              "yolo11n-with-plugin.engine",  // Model path
+              option                         // Inference settings
           );
 
-          // -------------------- 数据加载 --------------------
+          // -------------------- Data Loading --------------------
           cv::Mat cv_image = cv::imread("test_image.jpg");
           if (cv_image.empty()) {
-              throw std::runtime_error("无法加载测试图片");
+              throw std::runtime_error("Failed to load test image.");
           }
 
-          // 封装图像数据（不复制像素数据）
+          // Encapsulate image data (no pixel data copying)
           trtyolo::Image input_image(
-              cv_image.data,     // 像素数据指针
-              cv_image.cols,     // 图像宽度
-              cv_image.rows     // 图像高度
+              cv_image.data,     // Pixel data pointer
+              cv_image.cols,     // Image width
+              cv_image.rows     // Image height
           );
 
-          // -------------------- 执行推理 --------------------
+          // -------------------- Inference Execution --------------------
           trtyolo::DetectRes result = detector->predict(input_image);
           std::cout << result << std::endl;
 
-          // -------------------- 结果可视化（示意） --------------------
-          // 实际开发需实现可视化逻辑，示例：
+          // -------------------- Result Visualization (Example) --------------------
+          // Implement visualization logic in actual development, e.g.:
           // cv::Mat vis_image = visualize_detections(cv_image, result);
           // cv::imwrite("vis_result.jpg", vis_image);
 
-          // -------------------- 模型克隆演示 --------------------
-          auto cloned_detector = detector->clone();  // 创建独立实例
+          // -------------------- Model Cloning Demo --------------------
+          auto cloned_detector = detector->clone();  // Create an independent instance
           trtyolo::DetectRes cloned_result = cloned_detector->predict(input_image);
 
-          // 验证结果一致性
+          // Verify result consistency
           std::cout << cloned_result << std::endl;
 
       } catch (const std::exception& e) {
-          std::cerr << "程序异常: " << e.what() << std::endl;
+          std::cerr << "Program Exception: " << e.what() << std::endl;
           return EXIT_FAILURE;
       }
       return EXIT_SUCCESS;
   }
   ```
 
-### 5.推理流程图
+### 5. Inference Flowchart
 
-以下是`predict`方法的流程图，展示了从输入图片到输出结果的完整流程：
+Below is the flowchart of the `predict` method, which illustrates the complete process from input image to output result:
 
 <div>
   <p>
@@ -239,48 +230,47 @@ pip install dist/trtyolo-6.*-py3-none-any.whl
   </p>
 </div>
 
-只需将待推理的图片传递给 `predict` 方法，`predict` 内部会自动完成预处理、模型推理和后处理，并输出推理结果，这些结果可进一步应用于下游任务（如可视化、目标跟踪等）。
+Simply pass the image to be inferred to the `predict` method. The `predict` method will automatically complete preprocessing, model inference, and post-processing internally, and output the inference results. These results can be further applied to downstream tasks (such as visualization, object tracking, etc.).
 
+> For more deployment examples, please refer to the [Model Deployment Examples](examples) section.
 
-> 更多部署案例请参考[模型部署示例](examples) .
+## <div align="center">🌟 Sponsorship & Support</div>
 
-## <div align="center">🌟 赞助与支持</div>
-
-开源不易，如果本项目对你有所帮助，欢迎通过赞助支持作者。你的支持是开发者持续维护的最大动力！
+Open-source projects thrive on support. If this project has been helpful to you, consider sponsoring the author. Your support is the greatest motivation for continued development!
 
 <div align="center">
   <a href="https://afdian.com/a/laugh12321">
-    <img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt="赞助我">
+    <img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt="Sponsor Me">
   </a>
 </div>
 
 ---
 
-🙏 **衷心感谢以下支持者与赞助商的无私支持**：
+🙏 **A Heartfelt Thank You to Our Supporters and Sponsors**:
 
 > [!NOTE]
 >
-> 以下是 GitHub Actions 自动生成的赞助者列表，每日更新 ✨。
+> The following is a list of sponsors automatically generated by GitHub Actions, updated daily ✨.
 
 <div align="center">
   <a target="_blank" href="https://afdian.com/a/laugh12321">
-    <img alt="赞助者列表" src="https://github.com/laugh12321/sponsor/blob/main/sponsors.svg?raw=true">
+    <img alt="Sponsors List" src="https://github.com/laugh12321/sponsor/blob/main/sponsors.svg?raw=true">
   </a>
 </div>
 
-## <div align="center">📄 许可证</div>
+## <div align="center">📄 License</div>
 
-TensorRT-YOLO采用 **GPL-3.0许可证**，这个[OSI 批准](https://opensource.org/licenses/)的开源许可证非常适合学生和爱好者，可以推动开放的协作和知识分享。请查看[LICENSE](https://github.com/laugh12321/TensorRT-YOLO/blob/master/LICENSE) 文件以了解更多细节。
+TensorRT-YOLO is licensed under the **GPL-3.0 License**, an [OSI-approved](https://opensource.org/licenses/) open-source license that is ideal for students and enthusiasts, fostering open collaboration and knowledge sharing. Please refer to the [LICENSE](https://github.com/laugh12321/TensorRT-YOLO/blob/master/LICENSE) file for more details.
 
-感谢您选择使用 TensorRT-YOLO，我们鼓励开放的协作和知识分享，同时也希望您遵守开源许可的相关规定。
+Thank you for choosing TensorRT-YOLO; we encourage open collaboration and knowledge sharing, and we hope you comply with the relevant provisions of the open-source license.
 
-## <div align="center">📞 联系方式</div>
+## <div align="center">📞 Contact</div>
 
-对于 TensorRT-YOLO 的错误报告和功能请求，请访问 [GitHub Issues](https://github.com/laugh12321/TensorRT-YOLO/issues)！
+For bug reports and feature requests regarding TensorRT-YOLO, please visit [GitHub Issues](https://github.com/laugh12321/TensorRT-YOLO/issues)!
 
-给项目点亮 ⭐ Star 可以帮助我们优先关注你的需求，加快响应速度～
+Giving the project a ⭐ Star helps us prioritize your needs and speed up the response time!
 
-## <div align="center">🙏 致谢</div>
+## <div align="center">🙏 Thanks</div>
 
 <div align="center">
 <a href="https://hellogithub.com/repository/942570b550824b1b9397e4291da3d17c" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=942570b550824b1b9397e4291da3d17c&claim_uid=2AGzE4dsO8ZUD9R&theme=neutral" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>

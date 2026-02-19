@@ -1,5 +1,3 @@
-English | [简体中文](README.md)
-
 <div align="center">
   <img width="75%" src="assets/logo.png">
 

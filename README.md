@@ -8,8 +8,6 @@
 
 </div>
 
-## <div align="center">✨ Key Features</div>
-
 ### 🎯 Diverse YOLO Support
 - **Comprehensive Compatibility**: Supports YOLOv3 to YOLO12 series models, as well as PP-YOLOE+, YOLO-World and YOLO-Master, meeting diverse needs. See [🖥️ Supported Models List](https://github.com/laugh12321/TensorRT-YOLO/blob/export/README.md#%EF%B8%8F-model-support-list) for details.
 - **Flexible Switching**: Provides simple and easy-to-use interfaces for quick switching between different YOLO versions. 🌟 NEW
